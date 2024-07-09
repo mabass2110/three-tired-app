@@ -13,6 +13,8 @@ db.defaults({ posts: []}).write();
 // count posts
 // ----------------------------
 // YOUR CODE
+const totalPosts = db.get('posts').value().length
+console.log(totalPosts)
 
 // find all posts ids
 // ----------------------------
