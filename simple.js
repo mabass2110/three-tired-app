@@ -19,11 +19,14 @@ console.log(totalPosts)
 // find all posts ids
 // ----------------------------
 // YOUR CODE
+const allPostIds = db.get('posts')
+  .value() // Get all posts as an array
+  .map(post => post.id); // Extract the 'id' property from each post
 
-// all matches of published false
-// ----------------------------
-// YOUR CODE
+console.log('All post IDs:', allPostIds);
 
 // find post with published false
 // ----------------------------
 // YOUR CODE
+const publishedFalse = db.get('posts').value().filter(publish => publish.published === false)
+console.log(publishedFalse)
