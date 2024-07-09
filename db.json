@@ -39,6 +39,16 @@
       "id": "12",
       "title": "hello world",
       "published": "true"
+    },
+    {
+      "id": 50,
+      "title": "lowdb is awesome",
+      "published": true
+    },
+    {
+      "id": 1,
+      "title": "Post 1",
+      "content": "This is the first post content"
     }
   ]
 }

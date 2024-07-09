@@ -1,13 +1,14 @@
-var low     = require('lowdb');
-var fs      = require('lowdb/adapters/FileSync');
-var adapter = new fs('db.json');
-var db      = low(adapter);
+const low = require('lowdb');
+const FileSync = require('lowdb/adapters/FileSync');
 
+// Create or use an existing JSON file (replace 'data.json' with your desired filename)
+const db = low(new FileSync('db.json'));
+
+const data = {id: 1, title: "Post 1", content: "This is the first post content"}
 // init the data store
 // ---------------------------
 db.defaults({ posts: []}).write();
- 
-console.log(db.get('posts').value());
+ db.get('posts').push(data).write()
 
 // count posts
 // ----------------------------
